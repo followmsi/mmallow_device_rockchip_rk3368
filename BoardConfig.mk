@@ -18,7 +18,7 @@
 -include vendor/rockchip/rk3368/BoardConfigVendor.mk
 -include device/rockchip/common/BoardConfig.mk
 
-TARGET_PREBUILT_KERNEL := kernel/arch/arm64/boot/Image
+TARGET_PREBUILT_KERNEL := device/rockchip/rk3368/kernel
 
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -64,3 +64,14 @@ MALLOC_IMPL := dlmalloc
 
 # Copy RK3368 own init.rc file
 # TARGET_PROVIDES_INIT_RC := true
+
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
+
+# TWRP settings
+TW_THEME := landscape_hdpi
+RECOVERY_SDCARD_ON_DATA := true
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_MTP := true
+TW_INCLUDE_NTFS_3G := true
+
